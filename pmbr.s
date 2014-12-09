@@ -1,6 +1,6 @@
 #-
 # Copyright (c) 2007 Yahoo!, Inc.
-# Copyright (c) 2014, AGH University of Science and Technology
+# Copyright (c) 2014 Konrad Jopek
 # All rights reserved.
 # Written by: John Baldwin <jhb@FreeBSD.org>
 # TPM Support added by: Konrad Jopek <kjopek@agh.edu.pl>
