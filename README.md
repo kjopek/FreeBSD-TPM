@@ -1,4 +1,4 @@
-PMBR + TPM
+FreeBSD + TPM
 ========
 
-Support for Trusted Boot for PMBR loader from FreeBSD.
+Support for Trusted Boot for pmbr, gpt(zfs)boot and loader in FreeBSD.
