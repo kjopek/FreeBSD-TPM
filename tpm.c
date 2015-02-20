@@ -44,17 +44,9 @@ tcg_status_check(void)
 
 		v86int();
 
-		/* make sure we have response from TPM */
-		if (v86.eax == TCG_PC_OK && v86.ebx == TCG_MAGIC) {
-			tpm_enabled = TCG_PC_OK;
-			return TCG_PC_OK;
-		} else {
-			tpm_enabled = v86.eax;
-			return v86.eax;
-		}
-	} else {
-		return tpm_enabled;
+		tpm_enabled = v86.eax;
 	}
+	return (tpm_enabled);
 }
 
 uint32_t 
@@ -92,7 +84,7 @@ tcg_hash_extend(uint32_t addr, uint32_t len, uint32_t pcr)
 	v86int();
 
 	if (v86.eax != TCG_PC_OK)
-		return v86.eax;
+		return (v86.eax);
 
 	v86.addr = 0x1a;
 	v86.eax = 0xbb02;
@@ -106,5 +98,5 @@ tcg_hash_extend(uint32_t addr, uint32_t len, uint32_t pcr)
 
 	v86int();
 
-	return v86.eax;		
+	return (v86.eax);
 }

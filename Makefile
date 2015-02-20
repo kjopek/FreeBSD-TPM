@@ -35,7 +35,7 @@ test_image:
 	sudo gpart create -s GPT /dev/md0
 	sudo gpart add -t freebsd-boot -s 128k /dev/md0
 	sudo gpart add -t freebsd-ufs /dev/md0
-	sudo gpart bootcode -b ./pmbr -p /boot/gptboot -i 1 /dev/md0
+	sudo gpart bootcode -b ./pmbr -p ./gptboot -i 1 /dev/md0
 	sudo newfs /dev/md0p2
 	sudo mkdir -p /tmp/mnt
 	sudo mount /dev/md0p2 /tmp/mnt

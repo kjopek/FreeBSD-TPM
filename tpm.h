@@ -30,18 +30,17 @@
 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/10.1/sys/boot/i386/common/cons.c 226746 2011-10-25 19:45:12Z jhb $");
 
 #include <sys/param.h>
 
 /* TPM Return codes */
-#define TCG_PC_OK		0x00
-#define TCG_PC_TPMERROR		0x01
-#define	TCG_PC_LOGOVERFLOW	0x02
-#define TCG_PC_UNSUPPORTED	0x03
+#define TCG_PC_OK			0x00
+#define TCG_PC_TPMERROR			0x01
+#define	TCG_PC_LOGOVERFLOW		0x02
+#define TCG_PC_UNSUPPORTED		0x03
 
 /* TCG Magic - typical content of EBX register */
-#define TCG_MAGIC		0x41504354
+#define TCG_MAGIC			0x41504354
 
 #define TPM_TAG_RQU_COMMAND		0x00C1
 #define TPM_TAG_RQU_AUTH1_COMMAND	0x00C2 
